@@ -1,0 +1,65 @@
+Wywołanie:
+1. mpicc integral_MPI.c
+2. mpiexec -n 4 ./a.out -100 100 1000
+
+Całkowana funkcja: f(x) = x*x
+Liczba procesów: 4
+
+1. Przedział <0,10>
+	Za pomocą online kalkulatora(https://pl.numberempire.com/definiteintegralcalculator.php)
+Wynik: 333.3333333333333
+    Całka obliczona dla:
+        10 punktów:
+Process 1 - result: 28.935184 (num_steps: 3 -> step_len: 1.0000000000000000, begin: 2.500000, end: 5.000000)
+Process 3 - result: 166.015625 (num_steps: 2 -> step_len: 1.0000000000000000, begin: 7.500000, end: 10.000000)
+Process 2 - result: 80.078125 (num_steps: 2 -> step_len: 1.0000000000000000, begin: 5.000000, end: 7.500000)
+Process 0 - result: 2.893518 (num_steps: 3 -> step_len: 1.0000000000000000, begin: 0.000000, end: 2.500000)
+
+Wynik: 277.922455
+
+        100 punktów:
+Process 1 - result: 38.025002 (num_steps: 25 -> step_len: 0.1000000014901161, begin: 2.500000, end: 5.000000)
+Process 0 - result: 4.900000 (num_steps: 25 -> step_len: 0.1000000014901161, begin: 0.000000, end: 2.500000)
+Process 2 - result: 103.025002 (num_steps: 25 -> step_len: 0.1000000014901161, begin: 5.000000, end: 7.500000)
+Process 3 - result: 200.524994 (num_steps: 25 -> step_len: 0.1000000014901161, begin: 7.500000, end: 10.000000)
+
+Wynik: 346.475006
+
+        1000 punktów:
+Process 1 - result: 36.614624 (num_steps: 250 -> step_len: 0.0099999997764826, begin: 2.500000, end: 5.000000)
+Process 2 - result: 99.364624 (num_steps: 250 -> step_len: 0.0099999997764826, begin: 5.000000, end: 7.500000)
+Process 3 - result: 193.489624 (num_steps: 250 -> step_len: 0.0099999997764826, begin: 7.500000, end: 10.000000)
+Process 0 - result: 5.239625 (num_steps: 250 -> step_len: 0.0099999997764826, begin: 0.000000, end: 2.500000)
+
+Wynik: 334.708496
+
+
+
+2. Przedział <-100,100>
+	Za pomocą online kalkulatora(https://pl.numberempire.com/definiteintegralcalculator.php)
+Wynik: 666666.6666666667
+    Całka obliczona dla:
+        10 punktów:
+Process 0 - result: 356481.468750 (num_steps: 3 -> step_len: 20.0000000000000000, begin: -100.000000, end: -50.000000)
+Process 2 - result: 15625.000000 (num_steps: 2 -> step_len: 20.0000000000000000, begin: 0.000000, end: 50.000000)
+Process 1 - result: 64814.816406 (num_steps: 3 -> step_len: 20.0000000000000000, begin: -50.000000, end: 0.000000)
+Process 3 - result: 203125.000000 (num_steps: 2 -> step_len: 20.0000000000000000, begin: 50.000000, end: 100.000000)
+
+Wynik: 640046.250000
+
+        100 punktów:
+Process 0 - result: 299200.000000 (num_steps: 25 -> step_len: 2.0000000000000000, begin: -100.000000, end: -50.000000)
+Process 2 - result: 39200.000000 (num_steps: 25 -> step_len: 2.0000000000000000, begin: 0.000000, end: 50.000000)
+Process 3 - result: 284200.000000 (num_steps: 25 -> step_len: 2.0000000000000000, begin: 50.000000, end: 100.000000)
+Process 1 - result: 44200.000000 (num_steps: 25 -> step_len: 2.0000000000000000, begin: -50.000000, end: 0.000000)
+
+Wynik: 666800.000000
+
+        1000 punktów:
+Process 1 - result: 41917.000000 (num_steps: 250 -> step_len: 0.2000000029802322, begin: -50.000000, end: 0.000000)
+Process 2 - result: 41417.000000 (num_steps: 250 -> step_len: 0.2000000029802322, begin: 0.000000, end: 50.000000)
+Process 3 - result: 290917.000000 (num_steps: 250 -> step_len: 0.2000000029802322, begin: 50.000000, end: 100.000000)
+Process 0 - result: 292417.000000 (num_steps: 250 -> step_len: 0.2000000029802322, begin: -100.000000, end: -50.000000)
+
+Wynik: 666668.000000
+
