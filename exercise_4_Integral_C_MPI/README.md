@@ -1,4 +1,4 @@
-# [Lab] Ćwiczenie 4 - MPI (całkowanie - C) 
+# [Lab] Ćwiczenie 5 - MPI (całkowanie - C) 
 
 ## Tresc:  
 Proszę policzyć przy pomocy metody prostokątów/trapezów/simpsona (możecie Państwo wybrać metodę) całkę oznaczoną funkcji jednej zmiennej. Procedura całkowania powinna przyjmować: wskaźnik na całkowaną funkcję, początek i koniec przedziału całkowania oraz liczbę punktów dla których obliczana jest wartość funkcji. Oto jej nagłówek:
