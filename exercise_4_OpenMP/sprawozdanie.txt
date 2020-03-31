@@ -1,0 +1,68 @@
+URUCHOMENIE:
+===============================================
+gcc -o openMP_liczbypierwsze openMP_liczbypierwsze.c -fopenmp
+time ./openMP_liczbypierwsze 2
+gcc -o liczbypierwsze liczbypierwsze.c
+time ./liczbypierwsze 
+
+===============================================
+CZASY
+
+10000000
+Sekwencyjnie:
+0m3,872s
+Równolegle:
+1 0m3,889s
+2 0m2,093s
+4 0m1,124s
+6 0m1,021s
+8 0m0,887s
+
+1000000
+Sekwencyjnie:
+0m0,220s
+Równolegle:
+1 0m0,222s
+2 0m0,143s
+4 0m0,091s
+6 0m0,090s
+8 0m0,062s
+
+100000
+Sekwencyjnie:
+0m0,043s
+Równolegle:
+1 0m0,030s
+2 0m0,020s
+4 0m0,021s
+6 0m0,020s
+8 0m0,010s
+
+p - liczba wątków
+n - ilosc 
+==============================================
+PRZYSPIESZENIE 
+
+S(p,n) =T(sekwencyjnie)/T(rownolegle)
+
+	10000000 1000000 100000
+2	1,85	 1,54	 2,15
+4	3,44	 2,41	 2,04
+6	3,79     2,44	 2,15
+8	4,36	 3,55	 4,3
+
+==============================================
+EFEKTYWNOŚĆ
+
+E(p,n) = S(p,n)/p
+
+	10000000 1000000 100000
+2	0,925	 0,77	 1,075
+4	0,86	 0,602	 0,51
+6	0,63	 0,406	 0,358
+8	0,545	 0,443   0,537
+
+==============================================
+
+Wnioski:
+Z danych wynika, że zrównoleglenie przynioso oczekiwane rezultaty w postaci zwiększenia wydajności. Zwiększenie wydajności zgodnie z przewidywaniami zwiększało się wraz ze zwiększenieniem liczby wątków, jak również wraz ze zwiększeniem wymiaru zrównoleglanych danych.
