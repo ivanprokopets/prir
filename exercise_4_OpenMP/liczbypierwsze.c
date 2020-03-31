@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <time.h>
 
 #define N 10000000
 #define S (int)sqrt(N)
@@ -16,6 +17,9 @@ long int llpier =0; /*l. liczb pierwszych w tablicy pierwsze*/
 double czas; /*zmienna do  mierzenia czasu*/
 FILE *fp;
 /*wyznaczanie podzielnikow z przedzialow 2..S*/
+
+clock_t begin = clock();
+
 for(i=2; i<=S; i++)
 	a[i] = 1; /*inicjowanie*/
 for(i=2; i<=S; i++)
@@ -36,6 +40,10 @@ for(liczba = S+1; liczba <=N; liczba++){
 	if(reszta != 0)
 	pierwsze[llpier++] = liczba; /*zapamietanie liczby pierwszej*/
 }
+
+clock_t end = clock();
+printf("Time: %g\n" ,(double)(end - begin) / CLOCKS_PER_SEC);
+
 if((fp = fopen("primes.txt", "w")) == NULL)
 {
 	printf("Nie moge otworzyc pliku do zapisu\n");
