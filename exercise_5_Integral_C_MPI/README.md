@@ -45,3 +45,9 @@ TEGO NIE MA
 1. http://mpitutorial.com/tutorials/mpi-hello-world/﻿
 
 2. http://mpitutorial.com/tutorials/mpi-send-and-receive/﻿
+
+### DO zrobienia:
+W ramach ćwiczenia proszę stworzyć 3 programy wykonujące operację całkowania:	
+* Program wykorzystuje do komunikacji tylko  funkcje MPI_Send, MPI_Recv
+* Program wykorzystuje do komunikacji funkcje komunikacji kolektywnej (MPI_Scatter, MPI_Gather/MPI_Reduce)
+* Program wykorzystuje komunikację nieblokującą (MPI_Isend, MPI_Irecv)
